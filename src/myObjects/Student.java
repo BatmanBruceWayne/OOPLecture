@@ -2,12 +2,13 @@ package myObjects;
 
 import java.util.ArrayList;
 
+import abstractParent.Person;
 import myTables.StudentCourse;
 
 public class Student extends Person{
     
     private String className;
-    public static StudentCourse studentAndCourse;
+    private ArrayList<Integer> coursesList; 
 
     public Student(String name, String className) {
     	super(name);
@@ -15,8 +16,8 @@ public class Student extends Person{
         this.className = className;
     }
     
-    public void register(int id) {
-    	studentAndCourse.addRegister(this.id, id);
+    public void register(int course_id) {
+    	this.coursesList.add(course_id);
     }
     
     public void printInfo() {

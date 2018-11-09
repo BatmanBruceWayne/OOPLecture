@@ -30,9 +30,14 @@ public class TeachersList {
 	}
 	
 	public void printAllLs() {
-		for(Teacher st: teachersList) {
-			st.printInfo();
-		}
+		if(numberOfTeachers == 0) {
+			System.out.println("Chua giang vien nao trong danh sach");
+		} else 
+			for(Teacher st: teachersList) {
+				st.printInfo();
+			}
+		System.out.println("---------------------");
+		
 	}
 	
 	public void deleteTeacher(int id) {

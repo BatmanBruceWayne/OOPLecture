@@ -2,6 +2,7 @@ package myObjects;
 
 import java.util.ArrayList;
 
+import abstractParent.Person;
 import myTables.TeacherCourse;
 
 public class Teacher extends Person{

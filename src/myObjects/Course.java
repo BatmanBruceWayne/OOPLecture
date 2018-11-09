@@ -6,13 +6,16 @@ public class Course {
     private int id;
     private String name;
     private Teacher teacher;
-    private Class course_class;
+    private ArrayList<Integer> classesList;
     
     public Course(int id, String name, Teacher teacher, Class course_class, ArrayList <Student> course_students) {
         this.id = id;
         this.name = name;
         this.teacher = teacher;
-        this.course_class = course_class;
+    }
+    
+    public void addClass(int class_id) {
+    	classesList.add(class_id);
     }
     
     ///// getters and setters ///////
@@ -41,11 +44,4 @@ public class Course {
         this.teacher = teacher;
     }
 
-    public Class getCourse_class() {
-        return course_class;
-    }
-
-    public void setCourse_class(Class course_class) {
-        this.course_class = course_class;
-    }
 }

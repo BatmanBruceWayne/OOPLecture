@@ -1,4 +1,4 @@
-package myObjects;
+package abstractParent;
 
 public abstract class Person {
 	protected int id;
