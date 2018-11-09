@@ -3,19 +3,30 @@ package myObjects;
 import java.util.ArrayList;
 
 import abstractParent.Person;
-import myTables.TeacherCourse;
+import myTables.ClassesList;
+import myTables.CoursesList;
+import myTables.TeachersList;
 
 public class Teacher extends Person{
     private String school;
-    public static TeacherCourse teacherAndCourse;
+    private ArrayList<Integer> coursesList;
 
     public Teacher(String name, String school) {
     	super(name);
         this.school = school;
     }
     
-    public void register(int id) {
-    	teacherAndCourse.addRegister(this.id, id);
+    public void register(int course_id) {
+    	coursesList.add(course_id);
+    }
+    
+    public void printClassesLs(ClassesList classesList, CoursesList coursesList, TeachersList tcsList) {
+    	for(StudyClass cl: classesList.getClassesList()) {
+    		if(cl.getTeacher_id() == this.id) {
+    			cl.printInfo(coursesList, tcsList);
+    			
+    		}
+    	}
     }
     
     //// getters and setters //////    

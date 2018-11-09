@@ -39,19 +39,28 @@ public class TeachersList {
 		System.out.println("---------------------");
 		
 	}
-	
-	public void deleteTeacher(int id) {
-		int tmp = 0;
-		for(Teacher tc: teachersList) {
-			if(tc.getId() == id) {
-				teachersList.remove(tc);
-				this.numberOfTeachers--;
-				return;
-			}
-			tmp++;
-		}
-		if(numberOfTeachers == tmp)
-			System.out.println("Khong ton tai giang vien nay");
-		////can bo sung
+
+	public ArrayList<Teacher> getTeachersList() {
+		return teachersList;
 	}
+	
+	//////////////////////
+	
+	
+	
+	
+//	public void deleteTeacher(int id) {
+//		int tmp = 0;
+//		for(Teacher tc: teachersList) {
+//			if(tc.getId() == id) {
+//				teachersList.remove(tc);
+//				this.numberOfTeachers--;
+//				return;
+//			}
+//			tmp++;
+//		}
+//		if(numberOfTeachers == tmp)
+//			System.out.println("Khong ton tai giang vien nay");
+//		////can bo sung
+//	}
 }

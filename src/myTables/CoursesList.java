@@ -43,4 +43,12 @@ public class CoursesList {
 			System.out.println("Khong ton tai mon hoc nay nay");
 		////can bo sung
 	}
+
+	///////////////////////
+	
+	public ArrayList<Course> getCoursesList() {
+		return coursesList;
+	}
+		
+	
 }

@@ -5,27 +5,22 @@ import java.util.Scanner;
 
 import myObjects.Course;
 import myObjects.Student;
-import myTables.StudentCourse;
+import myTables.ProjectsList;
 import myTables.StudentsList;
 import myObjects.Teacher;
-import myTables.TeacherCourse;
 import myTables.TeachersList;
 
 public class Database {
 	private ArrayList<Course> coursesList;
-	private TeacherCourse teacherAndCourse;
 	private StudentsList studentsList;
 	private TeachersList teachersList;
-	private StudentCourse studentAndCourse;
+	private ProjectsList projectsList;
 	
 	public Database() {
 		coursesList = new ArrayList<>();
-		studentAndCourse = new StudentCourse();
-		Student.studentAndCourse = studentAndCourse;
-		teacherAndCourse = new TeacherCourse();
-		Teacher.teacherAndCourse = teacherAndCourse;
 		studentsList = new StudentsList();
 		teachersList = new TeachersList();
+		projectsList = new ProjectsList();
 	}
 	
 	public void chooseOptions() {
@@ -44,7 +39,7 @@ public class Database {
 					studentsList.printAllLs();
 					break;
 				default:
-					System.out.println("dm");;
+					System.out.println("Ban chua chon chuc nang");;
 			}
 		}
 		
