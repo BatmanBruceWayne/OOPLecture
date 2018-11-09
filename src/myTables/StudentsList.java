@@ -1,6 +1,9 @@
-package myObjects;
+package myTables;
 
 import java.util.ArrayList;
+import java.util.Scanner;
+
+import myObjects.Student;
 
 public class StudentsList {
 	private ArrayList<Student> studentsList;
@@ -9,6 +12,17 @@ public class StudentsList {
 	public StudentsList() {
 		studentsList = new ArrayList<>();
 		numberOfStudents = 0;
+	}
+	
+	public Student createStudent() {
+		Student st;
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Tên sinh viên: ");
+		String name = sc.nextLine();
+		System.out.print("Ten lop hoc: ");
+		String className = sc.nextLine();
+		st = new Student(name, className);
+		return st;
 	}
 	
 	public void addStudent(Student st) {
@@ -21,10 +35,22 @@ public class StudentsList {
 		this.numberOfStudents++;
 		studentsList.add(st);
 		System.out.println("Da them hoc sinh thanh cong");
+		System.out.println("----------------------");
 	}
 	
-	public void modifyStudent() {
+	public void modifyStudent(int id) {
 		
+	}
+	
+	public void printAllLs() {
+		if(numberOfStudents == 0) {
+			System.out.println("Chua hoc sinh nao trong danh sach");
+		} else 
+			for(Student st: studentsList) {
+				
+				st.printInfo();
+			}
+		System.out.println("---------------------");
 	}
 	
 	public void deleteStudent(int id) {

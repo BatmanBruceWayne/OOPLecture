@@ -2,14 +2,16 @@ package myObjects;
 
 import java.util.ArrayList;
 
-public class Student {
-    private int id;
-    private String name;
+import myTables.StudentCourse;
+
+public class Student extends Person{
+    
     private String className;
     public static StudentCourse studentAndCourse;
 
     public Student(String name, String className) {
-        this.name = name;
+    	super(name);
+       // this.name = name;
         this.className = className;
     }
     
@@ -17,26 +19,17 @@ public class Student {
     	studentAndCourse.addRegister(this.id, id);
     }
     
-    ///////////////// getters and setters /////////////////////////
+    public void printInfo() {
+    	System.out.println("ID sinh vien: " + id);
+    	System.out.println("Ten sinh vien: " + name);
+    	System.out.println("---------------------");
+    }
     
-    public String getName() {
-        return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+    ///////////////// getters and setters /////////////////////////
+   
 
     public String getClassName() {
-        return name;
+        return className;
     }
 
     public void setClassName(String className) {

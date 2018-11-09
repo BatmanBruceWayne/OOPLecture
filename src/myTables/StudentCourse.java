@@ -1,4 +1,4 @@
-package myObjects;
+package myTables;
 
 import java.util.ArrayList;
 

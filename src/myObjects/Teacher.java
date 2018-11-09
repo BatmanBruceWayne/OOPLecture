@@ -2,14 +2,14 @@ package myObjects;
 
 import java.util.ArrayList;
 
-public class Teacher {
-    private int id;
-    private String name;
+import myTables.TeacherCourse;
+
+public class Teacher extends Person{
     private String school;
     public static TeacherCourse teacherAndCourse;
 
     public Teacher(String name, String school) {
-        this.name = name;
+    	super(name);
         this.school = school;
     }
     
@@ -17,23 +17,7 @@ public class Teacher {
     	teacherAndCourse.addRegister(this.id, id);
     }
     
-    //// getters and setters //////
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    //// getters and setters //////    
 
     public String getSchool() {
         return school;
@@ -42,4 +26,14 @@ public class Teacher {
     public void setSchool(String school) {
         this.school = school;
     }
+    
+    ////////////////////
+
+	@Override
+	public void printInfo() {
+		// TODO Auto-generated method stub
+		System.out.println("ID cua giang vien do " + id);
+    	System.out.println("Ten cua giang vien do: " + name);
+    	System.out.println("---------------------");
+	}
 }

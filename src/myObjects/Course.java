@@ -7,6 +7,15 @@ public class Course {
     private String name;
     private Teacher teacher;
     private Class course_class;
+    
+    public Course(int id, String name, Teacher teacher, Class course_class, ArrayList <Student> course_students) {
+        this.id = id;
+        this.name = name;
+        this.teacher = teacher;
+        this.course_class = course_class;
+    }
+    
+    ///// getters and setters ///////
 
     public int getId() {
         return id;
@@ -37,13 +46,6 @@ public class Course {
     }
 
     public void setCourse_class(Class course_class) {
-        this.course_class = course_class;
-    }
-
-    public Course(int id, String name, Teacher teacher, Class course_class, ArrayList <Student> course_students) {
-        this.id = id;
-        this.name = name;
-        this.teacher = teacher;
         this.course_class = course_class;
     }
 }

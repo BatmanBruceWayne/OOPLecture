@@ -1,6 +1,8 @@
-package myObjects;
+package myTables;
 
 import java.util.ArrayList;
+
+import myObjects.Teacher;
 
 public class TeachersList {
 	private ArrayList<Teacher> teachersList;
@@ -25,6 +27,12 @@ public class TeachersList {
 	
 	public void modifyTeacher() {
 		
+	}
+	
+	public void printAllLs() {
+		for(Teacher st: teachersList) {
+			st.printInfo();
+		}
 	}
 	
 	public void deleteTeacher(int id) {
