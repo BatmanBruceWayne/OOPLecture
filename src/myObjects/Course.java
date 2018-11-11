@@ -8,10 +8,14 @@ public class Course {
     private Teacher teacher;
     private ArrayList<Integer> classesList;
     
-    public Course(int id, String name, Teacher teacher, Class course_class, ArrayList <Student> course_students) {
-        this.id = id;
+    public Course(String name) {
         this.name = name;
-        this.teacher = teacher;
+    }
+    
+    public void printInfo() {
+    	System.out.println("ID môn học: " + id);
+    	System.out.println("Tên môn học: " + name);
+    	System.out.println("---------------------");
     }
     
     public void addClass(int class_id) {
