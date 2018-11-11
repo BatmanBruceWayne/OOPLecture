@@ -1,7 +1,9 @@
 package myTables;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
+import myObjects.Student;
 import myObjects.Teacher;
 
 public class TeachersList {
@@ -13,6 +15,17 @@ public class TeachersList {
 		numberOfTeachers = 0;
 	}
 	
+	public Teacher createTeacher() {
+		Teacher tc;
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Tên Giảng viên: ");
+		String name = sc.nextLine();
+		System.out.print("Tên trường: ");
+		String school = sc.nextLine();
+		tc = new Teacher(name, school);
+		return tc;
+	}
+	
 	public void addTeacher(Teacher tc) {
 		if(numberOfTeachers == 0) {
 			tc.setId(1);
@@ -22,7 +35,8 @@ public class TeachersList {
 		}
 		this.numberOfTeachers++;
 		teachersList.add(tc);
-		System.out.println("Da them giang vien thanh cong");
+		System.out.println("Đã thêm giảng viên thành công");
+		System.out.println("----------------------");
 	}
 	
 	public void modifyTeacher() {
@@ -31,7 +45,7 @@ public class TeachersList {
 	
 	public void printAllLs() {
 		if(numberOfTeachers == 0) {
-			System.out.println("Chua giang vien nao trong danh sach");
+			System.out.println("Chưa có ai trong danh sách");
 		} else 
 			for(Teacher st: teachersList) {
 				st.printInfo();

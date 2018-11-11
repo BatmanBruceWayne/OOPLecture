@@ -27,6 +27,8 @@ public class Database {
 		while(true) {
 			System.out.println("1. Thêm sinh viên");
 			System.out.println("2. In ra danh sách sinh viên");
+			System.out.println("3. Thêm giảng viên");
+			System.out.println("4. In ra danh sách giảng viên");
 			System.out.print("Chon Chuc nang: ");
 			Scanner sc = new Scanner(System.in);
 			int myOption = sc.nextInt();
@@ -38,8 +40,15 @@ public class Database {
 				case 2:
 					studentsList.printAllLs();
 					break;
+				case 3: 
+					Teacher tc = teachersList.createTeacher();
+					teachersList.addTeacher(tc);
+					break;
+				case 4:
+					teachersList.printAllLs();
+					break;
 				default:
-					System.out.println("Ban chua chon chuc nang");;
+					System.out.println("Bạn chưa chọn chức năng");;
 			}
 		}
 		

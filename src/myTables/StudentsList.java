@@ -19,7 +19,7 @@ public class StudentsList {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Tên sinh viên: ");
 		String name = sc.nextLine();
-		System.out.print("Ten lop hoc: ");
+		System.out.print("Tên lớp học: ");
 		String className = sc.nextLine();
 		st = new Student(name, className);
 		return st;
@@ -34,7 +34,7 @@ public class StudentsList {
 		}
 		this.numberOfStudents++;
 		studentsList.add(st);
-		System.out.println("Da them hoc sinh thanh cong");
+		System.out.println("Đã thêm sinh viên thành công");
 		System.out.println("----------------------");
 	}
 	
@@ -44,27 +44,26 @@ public class StudentsList {
 	
 	public void printAllLs() {
 		if(numberOfStudents == 0) {
-			System.out.println("Chua hoc sinh nao trong danh sach");
+			System.out.println("Chưa có ai trong danh sách");
 		} else 
 			for(Student st: studentsList) {
-				
 				st.printInfo();
 			}
 		System.out.println("---------------------");
 	}
 	
-	public void deleteStudent(int id) {
-		int tmp = 0;
-		for(Student st: studentsList) {
-			if(st.getId() == id) {
-				studentsList.remove(st);
-				this.numberOfStudents--;
-				return;
-			}
-			tmp++;
-		}
-		if(numberOfStudents == tmp)
-			System.out.println("Khong ton tai hoc sinh nay");
-		///can bo sung
-	}
+//	public void deleteStudent(int id) {
+//		int tmp = 0;
+//		for(Student st: studentsList) {
+//			if(st.getId() == id) {
+//				studentsList.remove(st);
+//				this.numberOfStudents--;
+//				return;
+//			}
+//			tmp++;
+//		}
+//		if(numberOfStudents == tmp)
+//			System.out.println("Khong ton tai hoc sinh nay");
+//		///can bo sung
+//	}
 }

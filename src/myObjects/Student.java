@@ -27,8 +27,9 @@ public class Student extends Person{
     }
     
     public void printInfo() {
-    	System.out.println("ID sinh vien: " + id);
-    	System.out.println("Ten sinh vien: " + name);
+    	System.out.println("ID sinh viên: " + id);
+    	System.out.println("Tên sinh viên: " + name);
+    	System.out.println("Tên lớp: " + className);
     	System.out.println("---------------------");
     }
     

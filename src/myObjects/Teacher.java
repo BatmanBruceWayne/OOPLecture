@@ -24,7 +24,6 @@ public class Teacher extends Person{
     	for(StudyClass cl: classesList.getClassesList()) {
     		if(cl.getTeacher_id() == this.id) {
     			cl.printInfo(coursesList, tcsList);
-    			
     		}
     	}
     }
@@ -44,8 +43,9 @@ public class Teacher extends Person{
 	@Override
 	public void printInfo() {
 		// TODO Auto-generated method stub
-		System.out.println("ID cua giang vien do " + id);
-    	System.out.println("Ten cua giang vien do: " + name);
+		System.out.println("ID giảng viên: " + id);
+    	System.out.println("Tên giảng viên: " + name);
+    	System.out.println("Tên trường: " + school);
     	System.out.println("---------------------");
 	}
 }
