@@ -26,6 +26,7 @@ public class ClassesList {
 		System.out.print("ID của môn học: ");
 		int course_id = sc.nextInt();
 		cl = new StudyClass(name, room, course_id);
+		sc.close();
 		return cl;
 	}
 	

@@ -22,6 +22,7 @@ public class StudentsList {
 		System.out.print("Tên lớp học: ");
 		String className = sc.nextLine();
 		st = new Student(name, className);
+		sc.close();
 		return st;
 	}
 	
@@ -36,10 +37,6 @@ public class StudentsList {
 		studentsList.add(st);
 		System.out.println("Đã thêm sinh viên thành công");
 		System.out.println("----------------------");
-	}
-	
-	public void modifyStudent(int id) {
-		
 	}
 	
 	public void printAllLs() {

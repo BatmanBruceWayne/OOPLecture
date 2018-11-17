@@ -20,6 +20,7 @@ public class CoursesList {
 		System.out.print("Tên môn học: ");
 		String name = sc.nextLine();
 		cr = new Course(name);
+		sc.close();
 		return cr;
 	}
 	

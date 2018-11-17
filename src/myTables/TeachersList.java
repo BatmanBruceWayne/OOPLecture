@@ -23,6 +23,7 @@ public class TeachersList {
 		System.out.print("Tên trường: ");
 		String school = sc.nextLine();
 		tc = new Teacher(name, school);
+		sc.close();
 		return tc;
 	}
 	
